@@ -1,12 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package calculadora;
 
+import javax.swing.JButton;
+
 /**
- *
+ * NOTAS: CON EL STRING DE LAS OPERACIONES lo que tenemos que hacer para
+ * interpretarlas es hacer un swict que depenga del getValor() para asi
+ * interpretar que tipo de operacion es
+ * 
+ * 
  * @author alejandro
  */
 public enum TipoBoton {
@@ -24,15 +25,16 @@ public enum TipoBoton {
     RESTA("-"),
     MULTIPLICACION("x"),
     DIVISION("/"),
-    IGUAL("=");
-    
-    private String valor;
+    IGUAL("="),
+    LIMPIAR("C");
+
+    private JButton boton;
 
     private TipoBoton(String valor) {
-        this.valor = valor;
+        this.boton = new JButton(valor);
     }
 
-    public String getValor() {
-        return valor;
+    public JButton getBoton() {
+        return boton;
     }
 }
