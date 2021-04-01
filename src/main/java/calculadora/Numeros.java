@@ -63,6 +63,7 @@ public class Numeros extends JPanel {
          */
         this.numeros[3][0] = new JButton("0");
         this.numeros[3][1] = new JButton(".");
+        this.numeros[3][2] = new JButton("");
 
         this.setLayout(new GridLayout(4, 3));
 
@@ -70,13 +71,10 @@ public class Numeros extends JPanel {
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 3; j++) {
 
-                //como el [3][2] no existe, tenemos que controlar eso
-                if (numeros[i][j] != null) {
-                    this.add(numeros[i][j]);
-                }
+                this.add(numeros[i][j]);
             }
         }
-        
+
         int ancho = this.numeros[3][0].getWidth() * 2;
         int alto = this.numeros[3][0].getHeight();
         this.numeros[3][0].setSize(new Dimension(alto, ancho));
@@ -84,16 +82,5 @@ public class Numeros extends JPanel {
 
     public JButton[][] getNumeros() {
         return numeros;
-    }
-
-    public static void main(String[] args) {
-
-        JFrame frame = new JFrame("Calculadora");
-        frame.setResizable(false);
-        frame.setLocationRelativeTo(null);
-        frame.add(new Numeros());
-        frame.pack();
-        frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
