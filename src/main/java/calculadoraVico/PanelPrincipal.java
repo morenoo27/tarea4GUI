@@ -44,7 +44,8 @@ public class PanelPrincipal extends JPanel {
             // Colocamos la botonera y el área texto
             this.add(areaTexto, BorderLayout.NORTH);
             this.add(botonera, BorderLayout.SOUTH);
-     
+            
+            
     }
 }
 
