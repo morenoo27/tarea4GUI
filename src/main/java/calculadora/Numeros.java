@@ -66,7 +66,7 @@ public class Numeros extends JPanel {
         
         this.numeros[4][0] = new JButton("0");
         this.numeros[4][1] = new JButton(".");
-        this.numeros[4][2] = new JButton("");
+        this.numeros[4][2] = new JButton("Ans");
 
         this.setLayout(new GridLayout(5, 3));
 
@@ -88,14 +88,14 @@ public class Numeros extends JPanel {
         return numeros;
     }
     
-//    public static void main(String[] args) {
-//
-//        JFrame frame = new JFrame("Calculadora");
-//        frame.setResizable(false);
-//        frame.setLocationRelativeTo(null);
-//        frame.add(new Numeros());
-//        frame.pack();
-//        frame.setVisible(true);
-//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//    }
+    public static void main(String[] args) {
+
+        JFrame frame = new JFrame("Calculadora");
+        frame.setResizable(false);
+        frame.setLocationRelativeTo(null);
+        frame.add(new Numeros());
+        frame.pack();
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
 }
