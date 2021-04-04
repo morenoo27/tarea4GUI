@@ -40,16 +40,4 @@ public class Pantalla extends JPanel { //extends JPanel
         this.add(operacion, BorderLayout.NORTH);
         this.add(resultado, BorderLayout.SOUTH);
     }
-    
-//    private final int FONT_SIZE = 18;
-//    private final int LIMITE_ESCRITURA = 10;
-//    
-//    public final int CARACTERES_MAXIMOS = 19;
-//
-//    public Pantalla() {
-//        this.setEditable(false);
-//        this.setFont(new Font("monospaced", Font.PLAIN, FONT_SIZE));
-//        this.setRows(1);
-//        this.setColumns(CARACTERES_MAXIMOS);
-//    }
 }
