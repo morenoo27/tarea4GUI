@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author aleja
+ * @author Alejandro Moreno Martín 1ºDAW
  */
 public class Botonera extends JPanel {
 

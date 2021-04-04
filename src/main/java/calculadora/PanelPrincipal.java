@@ -6,22 +6,20 @@
 package calculadora;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
 
 /**
  *
- * @author aleja
+ * @author Alejandro Moreno Martín 1ºDAW
  */
-public class PanelPrincipal extends JPanel implements ActionListener {
+public class PanelPrincipal extends JPanel {
 
     private PanelBotones botonera;
     private Pantalla pantalla;
-    private int tipoOperacio;
+    private int tipoOperacio;   
 
     public PanelPrincipal() {
 
@@ -42,11 +40,7 @@ public class PanelPrincipal extends JPanel implements ActionListener {
         this.add(pantalla, BorderLayout.NORTH);
         this.add(botonera, BorderLayout.SOUTH);
         
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent ae) {
-        
+        //comenzamos a 
         
     }
     
@@ -60,5 +54,4 @@ public class PanelPrincipal extends JPanel implements ActionListener {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-
 }
