@@ -31,7 +31,6 @@ public class PanelBotones extends JPanel {
 
         this.add(new Numeros());
         this.add(new Botonera());
-        
     }
 
     public Numeros getNumeros() {

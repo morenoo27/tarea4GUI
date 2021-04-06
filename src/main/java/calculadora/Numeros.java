@@ -1,21 +1,10 @@
 /* 
- *      | | | | |C| |/|
+ *      |(| |)| |C| |/|
  *      |7| |8| |9| |*|
  *      |4| |5| |6| |-|
  *      |1| |2| |3| |+|
- *      |  0  | |.| |=|
+ *      |0| |.| |A| |=|
  *
- *      this.numeros[0][2] = new JButton("9");
- *      this.numeros[0][1] = new JButton("8");
- *      this.numeros[0][0] = new JButton("7");
- *      this.numeros[1][2] = new JButton("6");
- *      this.numeros[1][1] = new JButton("5");
- *      this.numeros[1][0] = new JButton("4");
- *      this.numeros[2][2] = new JButton("3");
- *      this.numeros[2][1] = new JButton("2");
- *      this.numeros[2][0] = new JButton("1");
- *      this.numeros[3][0] = new JButton("0");
- *      this.numeros[3][1] = new JButton(".");
  */
 package calculadora;
 

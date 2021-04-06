@@ -40,4 +40,13 @@ public class Pantalla extends JPanel { //extends JPanel
         this.add(operacion, BorderLayout.NORTH);
         this.add(resultado, BorderLayout.SOUTH);
     }
+    
+    public void write(String texto){
+        
+        if (operacion.equals("")) {
+            operacion.setText(texto);
+        } else {
+            operacion.setText(operacion.getText() + texto);
+        }
+    }
 }

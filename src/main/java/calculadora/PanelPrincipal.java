@@ -8,6 +8,7 @@ package calculadora;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -19,7 +20,7 @@ public class PanelPrincipal extends JPanel {
 
     private PanelBotones botonera;
     private Pantalla pantalla;
-    private int tipoOperacio;   
+    private int tipoOperacio;
 
     public PanelPrincipal() {
 
@@ -28,10 +29,10 @@ public class PanelPrincipal extends JPanel {
     }
 
     private void initComponents() {
-        
+
         // Creamos el panel de botones
         botonera = new PanelBotones();
-        
+
         pantalla = new Pantalla();
 
         //Establecemos layout del panel principal
@@ -39,11 +40,43 @@ public class PanelPrincipal extends JPanel {
         // Colocamos la botonera y el área texto
         this.add(pantalla, BorderLayout.NORTH);
         this.add(botonera, BorderLayout.SOUTH);
-        
-        //comenzamos a 
-        
+
+        //comenzamos a inicializar los actionlisteners
+        /**
+         * De momento, lo que haremos seran los botones de los unmeros, para asi
+         * realixzar una nueva operacion en la pantalla, que sera
+         * "escribir"/"write"
+         */
+        for (int i = 1; i < 5; i++) {
+            for (int j = 0; j < 3; j++) {
+                if ((i != 4 && j != 1) || (i != 4 && j != 2)) {
+                    botonera.getNumeros().getNumeros()[i][j].addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent ae) {
+
+                            JButton boton = (JButton) ae.getSource();
+                            pantalla.write(boton.getText());
+                        }
+                    });
+                }
+
+                if (i == 4 && j == 1) {
+                    botonera.getNumeros().getNumeros()[i][j].addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent ae) {
+                            
+                            JButton boton = (JButton) ae.getSource();
+                            pantalla.write(boton.getText());
+                        }
+                    });
+
+                    //una vez pongamos el punto, no vamosp a poder pulsarlo
+                    botonera.getNumeros().getNumeros()[4][1].setEnabled(false);
+                }
+            }
+        }
     }
-    
+
     public static void main(String[] args) {
 
         JFrame frame = new JFrame("Calculadora");
